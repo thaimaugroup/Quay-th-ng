@@ -51,7 +51,7 @@ export default function StaffInput({ onStart }: StaffInputProps) {
 
             <main className="flex-grow flex flex-col items-center justify-center p-4 md:p-8 relative z-20 w-full max-w-4xl mx-auto">
                 <header className="mb-8 md:mb-12 text-center w-full">
-                    <h1 className="text-4xl md:text-6xl font-display font-black text-transparent bg-clip-text bg-gradient-to-b from-tet-gold to-yellow-600 drop-shadow-md tracking-wide uppercase">
+                    <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-tet-gold to-yellow-600 drop-shadow-md tracking-wide uppercase" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
                         Hái Lộc Đầu Xuân
                     </h1>
                     <p className="text-cream/80 mt-2 text-sm md:text-lg font-light tracking-widest uppercase">Khai xuân như ý - Phú quý toàn niên</p>
@@ -111,13 +111,22 @@ export default function StaffInput({ onStart }: StaffInputProps) {
                                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                     <span className="material-icons-round text-gray-400 text-xl">store</span>
                                 </div>
-                                <input
-                                    className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-tet-gold focus:border-transparent transition-shadow shadow-sm"
-                                    placeholder="Chi nhánh"
+                                <select
+                                    className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-tet-gold focus:border-transparent transition-shadow shadow-sm appearance-none cursor-pointer"
                                     required
                                     value={formData.chiNhanh}
                                     onChange={(e) => setFormData({ ...formData, chiNhanh: e.target.value })}
-                                />
+                                >
+                                    <option value="" disabled>Chọn chi nhánh</option>
+                                    <option value="Đông Nguyên Chợ Lớn">Đông Nguyên Chợ Lớn</option>
+                                    <option value="Đông Nguyên PMH">Đông Nguyên PMH</option>
+                                    <option value="DonDon ParcMall">DonDon ParcMall</option>
+                                    <option value="DonDon Thisomall">DonDon Thisomall</option>
+                                    <option value="Đông Hỷ">Đông Hỷ</option>
+                                </select>
+                                <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                                    <span className="material-icons-round text-gray-400 text-xl">expand_more</span>
+                                </div>
                             </div>
                         </div>
 
