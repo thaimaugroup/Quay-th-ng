@@ -137,7 +137,7 @@ export default function Home() {
             {/* Main Content Area */}
             <div className="relative z-30 w-full max-w-5xl mt-20 flex flex-col items-center">
                 <div className="text-center mb-8">
-                    <p className="text-cream text-lg">Khách hàng: <span className="font-bold text-tet-gold">{customerInfo?.hoTen}</span></p>
+                    <p className="text-cream text-lg">Khách hàng: <span className="font-bold text-tet-gold">{customerInfo?.ten}</span></p>
                     <p className="text-cream text-lg">Bạn còn: <span className="font-bold text-3xl text-tet-gold">{turns}</span> lượt</p>
                 </div>
 

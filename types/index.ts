@@ -1,5 +1,5 @@
 export interface CustomerInfo {
-    hoTen: string;
+    ten: string;        // Đổi từ hoTen -> ten (khớp với Backend)
     sdt: string;
     chiNhanh: string;
     khuVuc: string;
@@ -10,6 +10,7 @@ export interface APIResponse {
     status: 'success' | 'error';
     giftName?: string;
     voucherCode?: string;
+    message?: string;
     error?: string;
 }
 

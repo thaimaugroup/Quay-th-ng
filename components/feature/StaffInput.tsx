@@ -9,7 +9,7 @@ interface StaffInputProps {
 
 export default function StaffInput({ onStart }: StaffInputProps) {
     const [formData, setFormData] = useState<CustomerInfo>({
-        hoTen: "",
+        ten: "",
         sdt: "",
         chiNhanh: "",
         khuVuc: "",
@@ -18,11 +18,11 @@ export default function StaffInput({ onStart }: StaffInputProps) {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        const turns = Math.floor(formData.tongBill / 500000);
+        const turns = Math.floor(formData.tongBill / 300000);
         if (turns > 0) {
             onStart(formData, turns);
         } else {
-            alert("Hóa đơn phải từ 500.000đ trở lên để tham gia!");
+            alert("Hóa đơn phải từ 300.000đ trở lên để tham gia!");
         }
     };
 
@@ -74,8 +74,8 @@ export default function StaffInput({ onStart }: StaffInputProps) {
                                 className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-tet-gold focus:border-transparent transition-shadow shadow-sm"
                                 placeholder="Họ và tên khách hàng"
                                 required
-                                value={formData.hoTen}
-                                onChange={(e) => setFormData({ ...formData, hoTen: e.target.value })}
+                                value={formData.ten}
+                                onChange={(e) => setFormData({ ...formData, ten: e.target.value })}
                             />
                         </div>
 
@@ -139,7 +139,7 @@ export default function StaffInput({ onStart }: StaffInputProps) {
                                 placeholder="Tổng hóa đơn"
                                 required
                                 type="number"
-                                min="500000"
+                                min="300000"
                                 value={formData.tongBill || ""}
                                 onChange={(e) => setFormData({ ...formData, tongBill: Number(e.target.value) })}
                             />
