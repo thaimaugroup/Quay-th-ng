@@ -206,23 +206,25 @@ function formatHeader(sheet) {
 // ========== SETUP FUNCTIONS (Simplified) ==========
 
 // Cấu hình để sinh mã (Chỉ dùng để setup DB, không dùng để tính tỷ lệ random nữa)
+// TỔNG: ~1000 voucher cho test
 const SETUP_CONFIG = [
   // [GiftName, Prefix, TotalQty]
-  ["Set gà ác tiệt trùng", "GA_SET", 10],
-  ["Mua 1 tặng 1", "M1T1", 10],
-  ["Mua 2 tặng 1", "M2T1", 50],
-  ["Voucher 20% Đông Nguyên Food", "VC20", 20],
-  ["Voucher 15% Đông Nguyên Food", "VC15", 50],
-  ["Voucher 10% Đông Nguyên Food", "VC10", 100],
-  ["Voucher 5% Đông Nguyên Food", "VC5", 100],
-  ["Voucher 100k", "VC100", 150],
-  ["Kim chi", "KC", 1000],          // Tăng số lượng lớn
-  ["Xá xíu", "XX", 1000],
-  ["Gà ác", "GA_TT", 1000],
-  ["Đùi gà", "DG", 1000],
-  ["Voucher 50k", "VC50", 2000],    // Tăng số lượng lớn
-  ["Nước sâm", "NS", 2000]
+  ["Set gà ác tiệt trùng", "GA_SET", 5],
+  ["Mua 1 tặng 1", "M1T1", 5],
+  ["Mua 2 tặng 1", "M2T1", 30],
+  ["Voucher 20% Đông Nguyên Food", "VC20", 10],
+  ["Voucher 15% Đông Nguyên Food", "VC15", 20],
+  ["Voucher 10% Đông Nguyên Food", "VC10", 40],
+  ["Voucher 5% Đông Nguyên Food", "VC5", 40],
+  ["Voucher 100k", "VC100", 120],
+  ["Kim chi", "KC", 30],
+  ["Xá xíu", "XX", 30],
+  ["Gà ác", "GA_TT", 30],
+  ["Đùi gà", "DG", 30],
+  ["Voucher 50k", "VC50", 350],
+  ["Nước sâm", "NS", 285]
 ];
+// TỔNG: 1025 voucher
 
 /**
  * CHẠY HÀM NÀY ĐỂ TẠO LẠI TOÀN BỘ SHEET
